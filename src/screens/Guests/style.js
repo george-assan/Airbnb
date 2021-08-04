@@ -1,6 +1,10 @@
 import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
+    container: {
+        height: '100%',
+        justifyContent: 'space-between'
+    },
     row: {
         flexDirection: 'row',
         justifyContent: 'space-between',
@@ -15,13 +19,13 @@ const styles = StyleSheet.create({
         width: 30,
         height: 30,
         borderRadius: 15,
-        borderColor:'#676767',
+        borderColor: '#676767',
         justifyContent: 'center',
         alignItems: 'center',
     },
-    buttontext:{
-        fontSize:20,
-        color:'#474747'
+    buttontext: {
+        fontSize: 20,
+        color: '#474747'
     },
 
     buttonContainer: {
@@ -32,6 +36,20 @@ const styles = StyleSheet.create({
     value: {
         fontSize: 16,
         marginHorizontal: 20
+    },
+
+    nextButton: {
+        marginBottom: 20,
+        backgroundColor: '#f15454',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: 50,
+        marginHorizontal: 20,
+        borderRadius:10,
+    },
+    nextButtonText:{
+        fontSize:16,
+        color:'white'
     }
 })
 

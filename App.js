@@ -18,6 +18,9 @@ import DestinationSearchScreen from './src/screens/DestinationSearch';
 import GuestScreen from './src/screens/Guests';
 import Post from './src/components/Post/';
 import feed from './assets/data/feed'
+import 'react-native-gesture-handler'
+import Router from './src/navigation/router';
+
 
 
 const post1 = feed[0];
@@ -29,12 +32,7 @@ const App: () => Node = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        {/* <HomeScreen /> */}
-        {/* <HomeScreen /> */}
-        {/* <DestinationSearchScreen /> */}
-        <GuestScreen />
-      </SafeAreaView>
+      <Router />
     </>
   );
 };
