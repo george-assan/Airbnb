@@ -15,6 +15,7 @@ import {
 import HomeScreen from './src/screens/Home';
 import SearchResultsScreen from './src/screens/SearchResults';
 import DestinationSearchScreen from './src/screens/DestinationSearch';
+import GuestScreen from './src/screens/Guests';
 import Post from './src/components/Post/';
 import feed from './assets/data/feed'
 
@@ -31,7 +32,8 @@ const App: () => Node = () => {
       <SafeAreaView>
         {/* <HomeScreen /> */}
         {/* <HomeScreen /> */}
-        <DestinationSearchScreen />
+        {/* <DestinationSearchScreen /> */}
+        <GuestScreen />
       </SafeAreaView>
     </>
   );
