@@ -4,33 +4,34 @@ import styles from './style'
 import Entypo from 'react-native-vector-icons/Entypo'
 import searchResults from '../../../assets/data/search'
 import { useNavigation } from '@react-navigation/core'
+import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete'
+import SuggestionRow from '../../components/LocationSuggestions'
 
 const DestinationSearchScreen = (props) => {
 
     const navigation = useNavigation();
 
-    const [inputText, setInputText] = useState("");
     return (
         <View style={styles.container}>
-            {/* Input Component */}
-            <TextInput style={styles.textInput}
-                placeholder="Where are you going?"
-                value={inputText}
-                onChangeText={setInputText}
-            />
-            {/* List of destination */}
-            <FlatList
-                data={searchResults}
-                renderItem={({ item }) =>
-                    <Pressable onPress={()=>{navigation.navigate('Guests')}} style={styles.row}>
-                        <View style={styles.iconContainer}>
-                            <Entypo name={"location-pin"} size={30} />
-                        </View>
-                        <Text style={styles.locationText}>{item.description}</Text>
-                    </Pressable>
-                }
-            />
+            <View>
+                <GooglePlacesAutocomplete
+                    placeholder='Where are you going?'
+                    onPress={(data, details) => {
+                        // console.log(data, details)
+                        navigation.navigate('Guests')
+                    }}
+                    query={{
+                        key: 'AIzaSyA4rmsKOhS-4Sf623wPvhmW4AkpwYqahhY',
+                        language: 'en'
+                    }}
+                    styles={{
+                        textInput: styles.textInput
+                    }}
+                    renderRow={(item) => <SuggestionRow item={item} />}
 
+                    suppressDefaultStyles
+                />
+            </View>
         </View>
     )
 }
