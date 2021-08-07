@@ -5,13 +5,22 @@ const styles = StyleSheet.create({
     container: {
         height: 120,
         padding: 5,
-        width: Dimensions.get('screen').width - 60
+        width: Dimensions.get('screen').width - 60,
     },
     innerContainer: {
         flexDirection: 'row',
         backgroundColor: 'white',
         borderRadius: 10,
-        overflow: 'hidden'
+        overflow: 'hidden',
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+
+        elevation: 5,
     },
 
     image: {
@@ -20,28 +29,27 @@ const styles = StyleSheet.create({
         resizeMode: 'cover',
     },
     textContainer: {
-        flex:1,
-        marginHorizontal:10
+        flex: 1,
+        marginHorizontal: 10
     }
     ,
     bedrooms: {
-        marginVertical: 10,
+        marginVertical: 7.5,
         color: '#5b5b5b'
     },
     description: {
-        fontSize: 18,
-        lineHeight: 26,
+        fontSize: 15,
     },
     prices: {
-        fontSize: 18,
-        marginVertical: 10
+        fontSize: 15,
+        marginVertical: 7.5
     },
     oldPrice: {
         color: '#5b5b5b',
         textDecorationLine: 'line-through',
     },
     newPrice: {
-        color:'black',
+        color: 'black',
         fontWeight: 'bold'
     },
     totalPrice: {
@@ -51,5 +59,4 @@ const styles = StyleSheet.create({
     },
 })
 
-
-export default styles
+export default styles;
