@@ -5,6 +5,7 @@ import { View, Text } from 'react-native'
 import DestinationSearchScreen from '../screens/DestinationSearch'
 import GuestScreen from '../screens/Guests'
 import HomeTabNavigator from './HomeTabNavigator'
+import PostScreen from '../screens/PostScreen'
 
 const Stack = createStackNavigator();
 
@@ -15,7 +16,7 @@ const Router = () => {
                 <Stack.Screen
                     name={"Home"}
                     component={HomeTabNavigator}
-                    options={{headerShown: false}}
+                    options={{ headerShown: false }}
                 />
                 <Stack.Screen
                     name={"Destination Search"}
@@ -29,6 +30,13 @@ const Router = () => {
                     component={GuestScreen}
                     options={{
                         title: "How many people?"
+                    }}
+                />
+                <Stack.Screen
+                    name={"Post"}
+                    component={PostScreen}
+                    options={{
+                        title: "Accomodation Details"
                     }}
                 />
             </Stack.Navigator>
