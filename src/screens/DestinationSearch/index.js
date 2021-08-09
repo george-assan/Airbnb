@@ -21,7 +21,7 @@ const DestinationSearchScreen = (props) => {
                         navigation.navigate('Guests')
                     }}
                     query={{
-                        key: 'AIzaSyA4rmsKOhS-4Sf623wPvhmW4AkpwYqahhY',
+                        key: 'API KEY GOES HERE',
                         language: 'en'
                     }}
                     styles={{

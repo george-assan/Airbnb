@@ -9,7 +9,7 @@
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyA4rmsKOhS-4Sf623wPvhmW4AkpwYqahhY" />
+    <meta-data android:name="com.google.android.geo.API_KEY" android:value="API-Key-Goes-Here" />
     <uses-library android:name="org.apache.http.legacy" android:required="false" />
   </application>
 </manifest>
